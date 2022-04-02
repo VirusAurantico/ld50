@@ -117,39 +117,40 @@ margin_top = -100.0
 margin_right = 73.0
 margin_bottom = 98.0
 
-[node name="Tittle" type="Label" parent="Props/Sprite/CenterContainer"]
-anchor_top = -0.439394
-anchor_bottom = -0.439394
-margin_left = 54.0
-margin_top = 92.0
-margin_right = 89.0
-margin_bottom = 106.0
-text = "News"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="Props/Sprite/CenterContainer"]
-margin_top = 19.0
+margin_top = 10.0
 margin_right = 144.0
-margin_bottom = 179.0
+margin_bottom = 188.0
 
-[node name="HboxSentence1" type="HBoxContainer" parent="Props/Sprite/CenterContainer/VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="Props/Sprite/CenterContainer/VBoxContainer"]
 margin_right = 144.0
 margin_bottom = 14.0
 
-[node name="Control" type="Control" parent="Props/Sprite/CenterContainer/VBoxContainer/HboxSentence1"]
+[node name="Control" type="Control" parent="Props/Sprite/CenterContainer/VBoxContainer/HBoxContainer4"]
 margin_right = 50.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 50, 0 )
 
-[node name="Sentence 1" type="Label" parent="Props/Sprite/CenterContainer/VBoxContainer/HboxSentence1"]
+[node name="Tittle" type="Label" parent="Props/Sprite/CenterContainer/VBoxContainer/HBoxContainer4"]
 margin_left = 54.0
-margin_right = 125.0
+margin_right = 89.0
+margin_bottom = 14.0
+text = "News"
+
+[node name="HboxSentence1" type="HBoxContainer" parent="Props/Sprite/CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 144.0
+margin_bottom = 32.0
+
+[node name="Sentence 1" type="Label" parent="Props/Sprite/CenterContainer/VBoxContainer/HboxSentence1"]
+margin_right = 71.0
 margin_bottom = 14.0
 text = "Sentence 1"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Props/Sprite/CenterContainer/VBoxContainer"]
-margin_top = 18.0
+margin_top = 36.0
 margin_right = 144.0
-margin_bottom = 88.0
+margin_bottom = 106.0
 
 [node name="Control2" type="Control" parent="Props/Sprite/CenterContainer/VBoxContainer/HBoxContainer2"]
 margin_right = 60.0
@@ -163,16 +164,20 @@ margin_bottom = 70.0
 rect_min_size = Vector2( 80, 70 )
 color = Color( 0, 0, 0, 0.6 )
 
-[node name="Sentence 2" type="Label" parent="Props/Sprite/CenterContainer/VBoxContainer"]
-margin_top = 92.0
+[node name="HBoxContainer3" type="HBoxContainer" parent="Props/Sprite/CenterContainer/VBoxContainer"]
+margin_top = 110.0
 margin_right = 144.0
-margin_bottom = 106.0
+margin_bottom = 124.0
+
+[node name="Sentence 2" type="Label" parent="Props/Sprite/CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_right = 71.0
+margin_bottom = 14.0
 text = "Sentence 2"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Props/Sprite/CenterContainer/VBoxContainer"]
-margin_top = 110.0
+margin_top = 128.0
 margin_right = 144.0
-margin_bottom = 160.0
+margin_bottom = 178.0
 
 [node name="ColorRect2" type="ColorRect" parent="Props/Sprite/CenterContainer/VBoxContainer/HBoxContainer"]
 margin_right = 80.0
