@@ -5,8 +5,8 @@ func _ready():
 
 
 func _on_Left_pressed():
-	print('Left')
+	print('Left1')
 
 
 func _on_Right_pressed():
-	print('Right')
+	print('Right2')
