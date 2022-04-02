@@ -1,7 +1,50 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Paper.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MinimalPixelFont.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/Main.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 2 )
 
 [node name="Main" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Paper" parent="." instance=ExtResource( 1 )]
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Buttons"]
+
+[node name="CenterContainer" type="CenterContainer" parent="Buttons/CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons/CanvasLayer/CenterContainer"]
+margin_left = 10.0
+margin_top = 143.0
+margin_right = 630.0
+margin_bottom = 216.0
+
+[node name="Left" type="Button" parent="Buttons/CanvasLayer/CenterContainer/HBoxContainer"]
+margin_right = 31.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 1 )
+text = "<"
+
+[node name="Control" type="Control" parent="Buttons/CanvasLayer/CenterContainer/HBoxContainer"]
+margin_left = 35.0
+margin_right = 585.0
+margin_bottom = 73.0
+rect_min_size = Vector2( 550, 0 )
+
+[node name="Right" type="Button" parent="Buttons/CanvasLayer/CenterContainer/HBoxContainer"]
+margin_left = 589.0
+margin_right = 620.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 1 )
+text = ">"
+
+[connection signal="pressed" from="Buttons/CanvasLayer/CenterContainer/HBoxContainer/Left" to="." method="_on_Left_pressed"]
+[connection signal="pressed" from="Buttons/CanvasLayer/CenterContainer/HBoxContainer/Right" to="." method="_on_Right_pressed"]
